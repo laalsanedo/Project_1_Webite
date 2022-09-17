@@ -1,0 +1,392 @@
+
+/* Page Layout and General Settings */
+/* For the whole document   */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Custom colors using for the page. */
+:root {
+    --prim: #3c6e71;
+    --white: #fffaff;
+    --grey: #f5f5f5;
+    --black1: #353535;
+    --black2: #00296b;
+}
+
+body{
+    /* specifying the height of the body to whatever the height of the device */
+    min-height: 100vh;
+    /*preventing left to right scrolling*/
+    overflow-x: hidden;
+    overflow-y:scroll;
+
+}
+.container{
+    /* the position of our main div is relative so that different devices can render the page properly*/
+    position: relative;
+    /* the width of the container will stay contant at 100%*/
+    width: 100%;
+}
+
+/* Navigation styling start */
+
+/* Adjusting the natigation bar */
+.navigation{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: var(--prim);
+    border-left: 10px solid var(--prim);
+    transition: 0.5s;
+    overflow: hidden;
+
+}
+
+.navigation.active{
+    width: 80px;
+}
+
+/* Adjusting the unordered list */
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Adjusting the line items in the unordered list */
+.navigation ul li{
+    position: relative;
+    width: 200%;
+    list-style: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+/* Adjusting the tabs inside the line items */
+.navigation ul li:nth-child(1){
+    margin-bottom: 40px;
+    pointer-events: none;
+
+}
+
+/* Adjusting the A tag in the line items */
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
+}
+
+/* Adjusting the hover */
+.navigation ul li:hover{
+    background-color: var(--white);
+}
+
+/* Adjusting the a tag setting when hovered */
+.navigation ul li:hover a{
+    color: var(--prim);
+}
+
+/* Adjusting the  box in which the icons sit (span)*/ 
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 80px;
+    line-height: 100px;
+    text-align: center;
+}
+
+/* Adjusting the icon size */
+.navigation ul li a .icon ion-icon{
+    font-size: 1.75em;
+}
+
+/* Adjsuting the box in which the title is displayed */
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 80px;
+    line-height: 80px;
+    text-align: start;
+    white-space: nowrap;
+    font-size: 1.5em;
+
+}
+/* Navigation styling end */
+
+
+
+
+/* Main Styling Starts */
+.main{
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: var(--white);
+    transition: 0.5s;
+}
+
+.main.active{
+    width: calc(100% - 80px);
+    left: 80px;
+}
+/* Topbar styling starts */
+/* Adjusting the whole top bar */
+.topbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    color: var(--black2);
+
+}
+/* Adjusting the toggler button */
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    font-size: 2.5em;
+    cursor: pointer;
+    columns: var(--black2);
+}
+
+/* Adjusting the search box and icon */
+.search{
+    position: relative;
+    width: 400px;
+    margin: 0px 10px;
+}
+
+.search label{
+    position: relative;
+    width: 100%;
+}
+.search label input{
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    padding: 5px 20px;
+    outline: none;
+    border: 1px solid var(--black2);
+}
+
+.search label ion-icon{
+    position:  absolute;
+    top: 0;
+    right: 10px;
+    font-size: 1.2em;
+}
+
+/* check margin if possible */
+.user{
+    position: relative;
+    min-width: 40px;
+    height: 40px;
+    overflow: hidden;
+    font-size: 1.2em;
+    margin-top: 10px;
+    right: 20px;
+}
+
+/* Topbar styling ends */
+
+/* Cards styling starts */
+
+/* Adjusting the main cardboard that will hold cards */
+.cardboard{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    /* want 4 colums of 1fr */
+    grid-template-columns: repeat(4, 1fr);  
+    /* display to grid so that the div blocks can be in a column fashion can experiemnt with rows too by using grid-template-rows */
+    display: grid;
+    /* adding gaps in grid so that the cards are not stuck */
+    gap: 10px;
+    cursor:pointer;
+}
+
+/* adjusting the cards */
+.cardboard .card{
+    position: relative;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Adjusting the number in the car */
+.cardboard .card .number{
+    position: relative;
+    font-weight: 500;
+    font-size: 3em;
+    color: var(--prim);
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Adjusting the title in the car */
+.cardboard .card .title{
+    position: relative;
+    font-weight:500;
+    font-size: 1.3em;
+    color: var(--black1);
+    display: flex;
+    justify-content: space-around;
+}
+
+.cardboard .card:hover{
+    background: var(--prim);
+
+}
+
+.cardboard .card:hover .number{
+    color: var(--white);
+}
+/* Cards styling ends */
+
+/* Data styling starts */
+
+.details{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    grid-template-columns: 2fr 1fr;
+    display: grid;
+    gap: 10px;
+    margin-top: 0px;
+}
+
+.tradetables{
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    grid-template-rows: 1fr 1fr;
+    display: grid;
+    gap: 10px;
+}
+
+.details .opentrades,
+.details .closetrades{
+    position: relative;
+    display: grid;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.1);
+    min-height: 350px;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.details .cardheader{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+.details .cardheader h2{
+    font-weight: 600;
+    color: var(--prim);
+}
+
+.details table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.details .opentrades table thead td,
+.details .closetrades table thead td{
+    font-weight: 600;
+}
+
+.details .opentrades table tr,
+.details .closetrades table tr{
+    color: var(--black1);
+    border-bottom:1px solid rgba(0, 0, 0, 1);
+
+}
+
+.details .opentrades table tbody tr:hover,
+.details .closetrades table tbody tr:hover{
+    color: var(--white);
+    background: var(--prim);
+    border-radius: 20px;
+    
+}
+
+.details .opentrades table tr:last-child,
+.details .closetrades table tr:last-child{
+    border-bottom: none;
+}
+
+.details .opentrades table tbody tr td:last-child,
+.details .closetrades table tbody tr td:last-child{
+    padding: 5px;
+}
+
+.details .opentrades table tr td:first-child,
+.details .closetrades table tr td:first-child{
+    text-align: start;
+}
+
+.details .opentrades table tr td,
+.details .closetrades table tr td{
+    text-align: center;
+}
+
+/* Chart Styling Starts */
+.data1{
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    grid-template-rows: 1fr 1fr;
+    display: grid;
+    gap: 10px;
+}
+
+.details .winlose,
+.details .buyshort{
+    position: relative;
+    display: grid;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.1);
+    min-height: 350px;
+    height: 100%;
+    border-radius: 20px;
+}
+
+
+
+/* Chart Styling Ends */
+
+
+
+
+
+
+/* Data styling end */
+
+
+
+
+/* Main Styling Ends */

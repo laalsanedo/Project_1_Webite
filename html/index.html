@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="container-fluid bg">
+      <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-12"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <!--Form starts-->
+          <form class="form-container" id="loginform">
+            <h1 class="title titleh1">Trad<span class="ex">EX</span></h1>
+
+            <small class="smalltext">
+              <span class="biga">A</span>
+              Trading Simulator<br /><br />
+            </small>
+
+            <div class="form-group title">
+              <label for="username" id="labelusername"><h5>Username</h5></label>
+              <input
+                type="text"
+                class="form-control"
+                id="username"
+                placeholder="Enter Username"
+              />
+            </div>
+
+            <div class="form-group title">
+              <label for="password" id="labelpassword"><h5>Password</h5></label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="Enter Password"
+              />
+            </div>
+
+            <!--change this to button-->
+            <div class="form-group form-check title mt-5">
+              <input type="checkbox" class="form-check-input" id="selection" />
+              <label class="form-check-label" for="section"
+                ><h6>Create an Acccount</h6></label
+              >
+            </div>
+            <button type="button" class="btn btn-white mt-3" onclick="check();">
+              Login
+            </button>
+          </form>
+          <!--Form ends-->
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12"></div>
+      </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

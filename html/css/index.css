@@ -1,0 +1,36 @@
+.bg{
+    background: url(background.jpg) no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+.form-container{
+    border: 0px solid #fff;
+    padding: 50px 60px;
+    margin-top: 35%;
+    -webkit-box-shadow: 10px 10px 39px 8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 39px 8px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 39px 8px rgba(0,0,0,0.75);
+}
+.title{
+    color: #fff;
+    
+}
+.titleh1{
+    letter-spacing: 3px;
+    font-size: 60px;
+}
+.smalltext{
+    font-size: 30px;
+
+}
+
+.lab{
+    text-indent: 100px;
+    text-align: right;
+}
+.ex{
+    color: black;
+}
+.biga{
+    color: white;
+}
