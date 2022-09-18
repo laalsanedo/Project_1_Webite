@@ -15,10 +15,10 @@ const cookieValue = getCookieValue();
 
 // on load the function will be called.
 window.onload = async function(){
-    //await updatePrices(cookieValue);
-    //await updateTables(cookieValue);
-    //await updateAccountInfo(cookieValue); 
-    //await winlosechart(cookieValue);  
+    await updatePrices(cookieValue);
+    await updateTables(cookieValue);
+    await updateAccountInfo(cookieValue); 
+    await winlosechart(cookieValue);  
 }
 
 // Extracts the key from the cookie

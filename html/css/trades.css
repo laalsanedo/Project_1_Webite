@@ -1,4 +1,3 @@
-
 /* Page Layout and General Settings */
 /* For the whole document   */
 * {
@@ -213,7 +212,7 @@ body{
     width: 100%;
     padding: 20px;
     /* want 4 colums of 1fr */
-    grid-template-columns: repeat(4, 1fr);  
+    grid-template-columns: repeat(5, 1fr);  
     /* display to grid so that the div blocks can be in a column fashion can experiemnt with rows too by using grid-template-rows */
     display: grid;
     /* adding gaps in grid so that the cards are not stuck */
@@ -264,116 +263,185 @@ body{
 /* Cards styling ends */
 
 /* Details styling starts */
-
 .details{
     position: relative;
     width: 100%;
-    padding: 20px;
     grid-template-columns: 2fr 1fr;
     display: grid;
-    gap: 10px;
+    gap: 15px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.12);
+    padding: 10px;
     margin-top: 0px;
 }
 
-.tradetables{
-    position: relative;
-    width: 100%;
-    padding: 10px;
-    grid-template-rows: 1fr 1fr;
-    display: grid;
-    gap: 10px;
+.detailheader{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: var(--prim);
 }
 
-.details .opentrades,
-.details .closetrades{
+.details .h2{
+    font-weight: 600;
+}
+
+/* Trade Info Table Styling setting Starts*/
+
+.tradeinfo{
     position: relative;
     display: grid;
     background: var(--white);
     padding: 20px;
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.1);
-    min-height: 350px;
+    min-height: 75vh;
     height: 100%;
     border-radius: 20px;
 }
 
-.details .cardheader{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-
+.changeviews{
+    background: var(--prim);
+    color: var(--white);
+    padding: 6px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-top: 5px;
 }
 
-.details .cardheader h2{
-    font-weight: 600;
-    color: var(--prim);
+.changeviews:hover{
+    cursor: pointer;
 }
 
-.details table{
+table{
     width: 100%;
     border-collapse: collapse;
 }
 
-.details .opentrades table thead td,
-.details .closetrades table thead td{
+table thead td{
     font-weight: 600;
 }
 
-.details .opentrades table tr,
-.details .closetrades table tr{
+table tr{
     color: var(--black1);
     border-bottom:1px solid rgba(0, 0, 0, 1);
 
 }
 
-.details .opentrades table tbody tr:hover,
-.details .closetrades table tbody tr:hover{
+table tbody tr:hover{
     color: var(--white);
     background: var(--prim);
     border-radius: 20px;
     
 }
 
-.details .opentrades table tr:last-child,
-.details .closetrades table tr:last-child{
+
+table tr:last-child{
     border-bottom: none;
 }
 
-.details .opentrades table tbody tr td:last-child,
-.details .closetrades table tbody tr td:last-child{
+table tbody tr td:last-child{
     padding: 5px;
 }
 
-.details .opentrades table tr td:first-child,
-.details .closetrades table tr td:first-child{
+table tr td:first-child{
     text-align: start;
 }
 
-.details .opentrades table tr td,
-.details .closetrades table tr td{
+table tr td{
     text-align: center;
 }
 
-/* Chart Styling Starts */
-.data1{
+
+
+
+/* Trade Info Table Styling setting Ends */
+
+/* Functionality Styling setting Starts */
+.functionality{
     position: relative;
     width: 100%;
-    padding: 10px;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     display: grid;
-    gap: 10px;
+    gap: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.12);
+    padding: 10px;
+    margin-top: 0px;
 }
 
-.details .winlose,
-.details .buyshort{
+.makeatrade,
+.tradetableoptions,
+.closeatrade{
     position: relative;
     display: grid;
     background: var(--white);
-    padding: 20px;
+    padding: 10px;
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.1);
-    min-height: 350px;
     height: 100%;
-    border-radius: 20px;
+    border-radius: 10px;
 }
-/* Chart Styling Ends */
-/* Data styling end */
-/* Main Styling Ends */
+
+.makeatrade .inputs{
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin-top: 0px;
+    justify-content: center;
+}
+
+.makeatrade .buttons{
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.makeatrade .inputs span input{
+    height: 40px;
+    border-radius: 40px;
+    text-align: center;
+    width: 49%;
+}
+
+.makeatrade .buttons span button{
+    height: 35px;
+    border-radius: 40px;
+    width: 49%;
+    color: var(--white);
+    background: var(--prim);
+}
+.closeatrade .inputs span input{
+    height: 25px;
+    border-radius: 40px;
+    text-align: center;
+    width: 49%;
+    margin-top: 0px;
+}
+
+.closeatrade .buttons span button{
+    border-radius: 40px;
+    width: 31%;
+    color: var(--white);
+    background: var(--prim);
+    margin-top: 8px;
+}
+
+.filteroptions .openoptions button{
+    border-radius: 20px;
+    width: 100%;
+    color: var(--white);
+    background: var(--prim);
+    margin-top: 8px;
+}
+.filteroptions .openoptions{
+    width: 100%;
+    position: relative;
+    display: grid;
+    justify-content: end;
+
+
+}
+
+
+/* Functionality Styling setting Ends */
+/* Details styling ends */
+/* Main Styling Starts */

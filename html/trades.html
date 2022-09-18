@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Custom/Local CSS files-->
+    <link rel="stylesheet" href="/html/css/trades.css">
+
+    <link 
+    rel="preconnect" 
+    href="https://fonts.googleapis.com"
+    >
+    <link 
+    rel="preconnect" 
+    href="https://fonts.gstatic.com" crossorigin
+    >
+    <link 
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" 
+    rel="stylesheet"
+    >
+
+    <!-- Title -->
+    <title>Tradex: Trades</title>  
+</head>
+<body>
+        <!-- Container Start -->
+        <div class="container">
+
+            <!-- Navigation Start -->
+            <div class="navigation">
+                <ul>
+                    <li>
+                        <a href="#">
+                        <span class="icon"><ion-icon name="desktop-outline"></ion-icon></span>
+                        <span class="title">TradEX</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/html/dashboard.html">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <span class="icon"><ion-icon name="analytics-outline"></ion-icon></span>
+                        <span class="title">Trades</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                        <span class="title">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Navigation End -->
+    
+            <!-- Main Start -->
+            <div class="main">
+                <!-- Topbar Start -->
+                <div class="topbar">
+    
+                    <!-- Toggler Start-->
+                    <div class="toggle">
+                        <ion-icon name="menu-outline"></ion-icon>   
+                    </div>
+                    <!-- Toggler End -->
+                    <!-- username Start -->
+                    <div class="user">
+                        Laalsanedo
+                    </div>
+                    <!-- username End-->
+                </div>
+                <!-- Topbar End -->
+                <!-- Cards Start -->
+                <div class="cardboard">
+                    <div class="card">
+                        <div>
+                            <div class="number" id="opentrades">0</div>
+                            <div class="title">Open Trades</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <div class="number" id="plreturn">0</div>
+                            <div class="title">P/L Return</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <div class="number" id="currentpower">0</div>
+                            <div class="title"> Current Buying Power</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <div class="number" id="nobuys">0</div>
+                            <div class="title">No of Buys</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <div class="number" id="noshort">0</div>
+                            <div class="title">No of Short</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cards End -->
+                <!-- Data List Starts -->
+                <div class="details">
+                    <!-- Trade Info Starts -->
+                    <div class="tradeinfo">
+                        <div class="detailheader">
+                            <h2>Open Trade Info</h2>
+                        </div>
+                        <table class="table" id="tradeinfotab">
+                            <thead class="mtablehead">
+                                <tr>
+                                    <td>Order Type</td>
+                                    <td>Symbol</td>
+                                    <td>Entry</td>
+                                    <td>Current </td>
+                                    <td>Order Size</td>
+                                    <td>P/L</td>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <!-- Trade Info Ends -->
+                    <!-- FUNCTIONALITY COMPONENET STARTS -->
+                    <div class="functionality">
+                        <div class="makeatrade">
+                            <!-- Make A Trade starts -->
+                            <div class="detailheader">
+                                <h2>Make a Trade</h2>
+                            </div>
+                            <div class="makeatradeform">
+                                <div class="inputs">
+                                    <span><input type="text" placeholder="AAPL"></span>
+                                    <span><input type="text" placeholder="10"></span>
+                                </div>
+                                <div class="buttons">
+                                    <span><button type="button">Buy</button></span>
+                                    <span><button type="button">Short</button></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Make A Trade ends -->
+                        <!-- Close A Trade starts -->
+                        <div class="closeatrade">
+                            <div class="detailheader">
+                                <h2>Close a Trade</h2>
+                            </div>
+                            <div class="closeatradeoptions">
+                                <div class="inputs">
+                                    <span><input type="text" placeholder="AAPL"></span>
+                                    <span><input type="text" placeholder="T-ID"></span>
+                                </div>
+                                <div class="buttons">
+                                    <span><button type="button">Latest</button></span>
+                                    <span><button type="button">Symbol</button></span>
+                                    <span><button type="button">By ID</button></span>
+                                    <span><button type="button">Winnner</button></span>
+                                    <span><button type="button">Lossers</button></span>
+                                    <span><button type="button">Close All</button></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Close A Trade ends -->
+                        <!-- Table Filter Starts -->
+                        <div class="tradetableoptions">
+                            <div class="detailheader">
+                                <h3>Trade Table Options</h3>
+                            </div>
+                            <div class="filteroptions">
+                                <div class="openoptions">
+                                    <span><button type="button">Open Win</button><span>
+                                    <span><button type="button">Open Loss</button></span>
+                                    <span><button type="button">Open All</button></span>
+                                    <span><button type="button">Close Win</button><span>
+                                    <span><button type="button">Close Loss</button><span>
+                                    <span><button type="button">Close All</button></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Table Filter Ends -->
+                    </div>
+                    <!-- FUNCTIONALITY STARTS COMPONENET ENDS -->
+                </div>
+                <!-- Data List Ends -->
+            </div>
+            <!-- Main End -->
+        </div>
+        <!-- Contianer End -->
+    
+    
+    
+    
+        <!-- Custom/Local JS files -->
+    
+        <script 
+        src="https://cdn.jsdelivr.net/npm/apexcharts">
+        </script>
+    
+        <script 
+        type="module" 
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js">
+        </script>
+    
+        <script
+        src="/html/js/toggle.js">
+        </script>
+    
+        <script 
+        nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js">
+        </script>
+    
+        <script 
+        src="/html/js/trades.js">
+        </script>
+    
+</body>
