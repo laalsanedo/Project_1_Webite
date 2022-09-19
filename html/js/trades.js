@@ -51,6 +51,7 @@ document.getElementById('cwin').addEventListener('click', getCWinners);
 document.getElementById('clos').addEventListener('click', getCLossers);
 document.getElementById('clall').addEventListener('click', getAllClose);
 
+document.getElementById('logout').addEventListener("click", logout);
 
 
 
@@ -414,3 +415,7 @@ async function closeAll(){
         window.alert("Something went wrong on our side. we are sorry");
     }
 }
+
+function logout(){
+    document.cookie = "jwtKey=;";
+  }

@@ -21,6 +21,8 @@ window.onload = async function(){
     await winlosechart(cookieValue);  
 }
 
+document.getElementById('logout').addEventListener("click", logout);
+
 // Extracts the key from the cookie
 function getCookieValue(){
     return document.cookie.slice((document.cookie.indexOf("=")+1));
@@ -257,5 +259,9 @@ async function winlosechart(cookieValue){
     var chart1 = new ApexCharts(document.querySelector(".buyshortchart"), options1)
     chart1.render(); 
 
+}
+
+function logout(){
+  document.cookie = "jwtKey=;";
 }
 
