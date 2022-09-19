@@ -113,9 +113,9 @@
                 <div class="details">
                     <!-- Trade Info Starts -->
                     <div class="tradeinfo">
-                        <div class="detailheader">
+                        <span class="detailheader">
                             <h2>Open Trade Info</h2>
-                        </div>
+                        </span>
                         <table class="table" id="tradeinfotab">
                             <thead class="mtablehead">
                                 <tr>
@@ -127,7 +127,7 @@
                                     <td>P/L</td>
                                 </tr>
                             </thead>
-                            <tbody></tbody>
+                            <tbody id="tablebody"></tbody>
                         </table>
                     </div>
                     <!-- Trade Info Ends -->
@@ -140,12 +140,12 @@
                             </div>
                             <div class="makeatradeform">
                                 <div class="inputs">
-                                    <span><input type="text" placeholder="AAPL"></span>
-                                    <span><input type="text" placeholder="10"></span>
+                                    <span><input type="text" id="symbol" placeholder="AAPL"></span>
+                                    <span><input type="text" id="orderSize" placeholder="10"></span>
                                 </div>
                                 <div class="buttons">
-                                    <span><button type="button">Buy</button></span>
-                                    <span><button type="button">Short</button></span>
+                                    <span><button type="button" id="buybutton" value ="1">Buy</button></span>
+                                    <span><button type="button" id="shortbutton" value = "0">Short</button></span>
                                 </div>
                             </div>
                         </div>
@@ -157,16 +157,16 @@
                             </div>
                             <div class="closeatradeoptions">
                                 <div class="inputs">
-                                    <span><input type="text" placeholder="AAPL"></span>
-                                    <span><input type="text" placeholder="T-ID"></span>
+                                    <span><input type="text" id="csymbol" placeholder="AAPL"></span>
+                                    <span><input type="text" id="tradeID" placeholder="T-ID"></span>
                                 </div>
                                 <div class="buttons">
-                                    <span><button type="button">Latest</button></span>
-                                    <span><button type="button">Symbol</button></span>
+                                    <span><button type="button" id="latest">Latest</button></span>
+                                    <span><button type="button" id="symbo1">Symbol</button></span>
                                     <span><button type="button">By ID</button></span>
-                                    <span><button type="button">Winnner</button></span>
-                                    <span><button type="button">Lossers</button></span>
-                                    <span><button type="button">Close All</button></span>
+                                    <span><button type="button" id="cwinner">Winnner</button></span>
+                                    <span><button type="button" id="closer">Lossers</button></span>
+                                    <span><button type="button" id="call">Close All</button></span>
                                 </div>
                             </div>
                         </div>
@@ -178,12 +178,12 @@
                             </div>
                             <div class="filteroptions">
                                 <div class="openoptions">
-                                    <span><button type="button">Open Win</button><span>
-                                    <span><button type="button">Open Loss</button></span>
-                                    <span><button type="button">Open All</button></span>
-                                    <span><button type="button">Close Win</button><span>
-                                    <span><button type="button">Close Loss</button><span>
-                                    <span><button type="button">Close All</button></span>
+                                    <span><button type="button" id="owin">Open Win</button><span>
+                                    <span><button type="button" id="olos">Open Loss</button></span>
+                                    <span><button type="button" id="oall">Open All</button></span>
+                                    <span><button type="button" id="cwin">Close Win</button><span>
+                                    <span><button type="button" id="clos">Close Loss</button><span>
+                                    <span><button type="button" id="clall">Close All</button></span>
                                     </div>
                                 </div>
                             </div>

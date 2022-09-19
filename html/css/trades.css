@@ -289,13 +289,14 @@ body{
 
 .tradeinfo{
     position: relative;
-    display: grid;
+    display: block;
     background: var(--white);
     padding: 20px;
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.1);
     min-height: 75vh;
     height: 100%;
     border-radius: 20px;
+    overflow: auto;
 }
 
 .changeviews{
@@ -315,6 +316,11 @@ body{
 table{
     width: 100%;
     border-collapse: collapse;
+}
+
+.tradeinfotab {
+    overflow: auto;
+    height: 700px;
 }
 
 table thead td{

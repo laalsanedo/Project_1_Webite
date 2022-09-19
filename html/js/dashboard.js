@@ -89,6 +89,7 @@ async function updateTables(cookievalue){
         }
     });
     response1 = await response1.json();
+
     let response2 = await fetch(baseURL+closetradesall, {
         method: "GET",
         headers: {
@@ -117,7 +118,7 @@ async function updateTables(cookievalue){
     }
 
     let table2 = document.getElementById("closetab");
-    for(let i = 0; i < Object.keys(response1).length; i++){
+    for(let i = 0; i < Object.keys(response2).length; i++){
         let template = `
         <tr>
             <td>${(response2[i].orderType)}</td>
