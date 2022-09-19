@@ -68,6 +68,8 @@ async function updatePrices(cookieValue){
             jwtKey : cookieValue
         }
     });
+    response = await response.text();
+    document.getElementById('lusername').innerHTML = response;
 
     
 }
@@ -257,10 +259,10 @@ async function updateCards(){
 
     document.getElementById('opentrades').innerHTML = response.openTrades;
     if (await response.openPL == 0){
-        document.getElementById('plreturn').innerHTML = ((response.openPL/response.investment)*100).toFixed(2)+ "%";
+        document.getElementById('plreturn').innerHTML = "0%";
     }
     else{
-        document.getElementById('plreturn').innerHTML = "0%";
+        document.getElementById('plreturn').innerHTML = ((response.openPL/response.investment)*100).toFixed(2)+ "%";
     }
     
     document.getElementById('currentpower').innerHTML = (parseFloat(response1)+response.openPL).toFixed(2);

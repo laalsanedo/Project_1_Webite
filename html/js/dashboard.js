@@ -37,6 +37,9 @@ async function updatePrices(cookieValue){
             jwtKey : cookieValue
         }
     });
+
+    response = await response.text();
+    document.getElementById('lusername').innerHTML = response;
 }
 
 // funtion to update the cards.
@@ -65,7 +68,12 @@ async function updateAccountInfo(cookievalue){
     });
     //Getting and Setting the balance response
     let balance =  await balres.text();
-    document.querySelector('#balnum').innerHTML = parseFloat(balance).toFixed(2);
+    //Getting and Setting the OpenPL
+    let pl = await openplres.text();
+    balance = Number (parseFloat(balance).toFixed(2));
+    pl = Number(parseFloat(pl).toFixed(2))
+    document.querySelector('#plnum').innerHTML =pl;
+    document.querySelector('#balnum').innerHTML = balance+pl;
 
 
     //Getting and Setting the buying power response
@@ -75,9 +83,7 @@ async function updateAccountInfo(cookievalue){
     //Getting and Setting the total investment
     document.querySelector('#invnum').innerHTML = (balance-power).toFixed(2);
 
-    //Getting and Setting the OpenPL
-    let pl = await openplres.text();
-    document.querySelector('#plnum').innerHTML = parseInt(pl).toFixed(2);
+    
 }
 
 // Prints the table data.
@@ -245,7 +251,7 @@ async function winlosechart(cookieValue){
       },
       xaxis: {
         type: 'text',
-        categories: ['Open', 'Closed'],
+        categories: ['Open Trade', 'Closed Trade'],
       },
       legend: {
         position: 'right',
